@@ -131,7 +131,7 @@
         // if (!response.ok) {
         //   throw new Error(`HTTP 錯誤: ${response.status}`);
         // }
-        const data = await response;
+        // const data = await response;
         // if (!data.success) {
         //   const errorMsg = data.errors?.[0]?.message || "API 回傳錯誤";
         //   throw new Error(errorMsg);
@@ -139,7 +139,7 @@
         // if (!data.result || !data.result.response) {
         //   throw new Error("API 回傳資料格式錯誤");
         // }
-        return data;
+        return response;
       } catch (error) {
         return { error: error.message || "發生未知錯誤" };
       }
