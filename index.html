@@ -123,7 +123,7 @@
       const typingEl = appendMessage('AI 輸入中', 'ai', false);
       typingEl.classList.add('typing');
 
-      const url = `${endpoint}?mes=${encodeURIComponent('<message>' + text + '</message>')}&key=${apiKey}`;
+      const url = `${endpoint}?mes=${encodeURIComponent(text)}&key=${apiKey}`;
       try {
         const resp = await fetch(url);
         if (!resp.ok) throw new Error('網路錯誤: ' + resp.status);
